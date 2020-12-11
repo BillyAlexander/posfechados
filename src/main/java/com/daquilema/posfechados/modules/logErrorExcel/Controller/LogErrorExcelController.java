@@ -16,13 +16,13 @@ import com.daquilema.posfechados.modules.logErrorExcel.service.LogErrorExcelServ
 import com.daquilema.posfechados.utils.Const;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping(value = Const.API_PRIVATE + "logerrorexcel", produces = MediaType.APPLICATION_JSON_VALUE)
 public class LogErrorExcelController {
 
 	@Autowired
 	private LogErrorExcelService logErrorExcelService;
 
+	@CrossOrigin(origins = "*")
 	@GetMapping(value = "list")
 	public ResponseEntity<?> listLogError(@RequestParam(required = false) Long empresaId,
 			@RequestParam(required = false) Long ejercicioId, @RequestParam(required = false) Date startDate,
