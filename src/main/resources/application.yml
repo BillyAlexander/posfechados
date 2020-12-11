@@ -1,0 +1,43 @@
+## Server
+server:
+  servlet:
+    context-path: /posdated-ws
+  compression:
+    enabled: false
+    mime-types:
+      - application/json
+      - application/xml
+      - text/html
+      - text/xml
+      - text/plain
+             
+spring:
+## JPA    
+  jpa:
+    generate-ddl: false
+    show-sql: false
+    hibernate:
+      ##drop n create table again, good for testing, comment this in production or change to validate,update
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 50
+## Flyway
+  flyway:
+    enabled: true          
+    schemas:
+      - posfechados
+    locations:
+      - classpath:db/migration/posfechados
+    baseline-on-migrate: true
+    check-location: true
+    encoding: UTF-8
+    out-of-order: true         
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+        
+        
