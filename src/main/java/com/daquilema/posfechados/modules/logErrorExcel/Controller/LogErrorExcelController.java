@@ -22,7 +22,6 @@ public class LogErrorExcelController {
 	@Autowired
 	private LogErrorExcelService logErrorExcelService;
 
-	@CrossOrigin(origins = "*")
 	@GetMapping(value = "list")
 	public ResponseEntity<?> listLogError(@RequestParam(required = false) Long empresaId,
 			@RequestParam(required = false) Long ejercicioId, @RequestParam(required = false) Date startDate,
