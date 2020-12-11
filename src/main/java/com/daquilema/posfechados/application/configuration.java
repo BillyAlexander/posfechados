@@ -32,9 +32,9 @@ public class configuration {
 	public DataSource dataBaseDataSource() throws NamingException {
 		DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
 		dataSourceBuilder.driverClassName("org.postgresql.Driver");
-		dataSourceBuilder.url("jdbc:postgresql://localhost:5432/postgres");
-		dataSourceBuilder.username("postgres");
-		dataSourceBuilder.password("password");
+		dataSourceBuilder.url("jdbc:postgresql://ec2-54-208-233-243.compute-1.amazonaws.com:5432/d7t2uvjj3nvagd");
+		dataSourceBuilder.username("lxzehfswwiupap");
+		dataSourceBuilder.password("a3acc89c74d33938d32f8d00842c9c7f4949be1d999ec1927b365ba5dc22cff5");
 		return dataSourceBuilder.build();
 	}
 
