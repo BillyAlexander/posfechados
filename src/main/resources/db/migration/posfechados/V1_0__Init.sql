@@ -1,6 +1,6 @@
 -- DROP SCHEMA posfechados;
 
-CREATE SCHEMA IF NOT EXISTS posfechados AUTHORIZATION postgres;
+CREATE SCHEMA IF NOT EXISTS posfechados AUTHORIZATION lxzehfswwiupap;
 
 
 
