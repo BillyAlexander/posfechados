@@ -16,6 +16,7 @@ import com.daquilema.posfechados.modules.logErrorExcel.service.LogErrorExcelServ
 import com.daquilema.posfechados.utils.Const;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping(value = Const.API_PRIVATE + "logerrorexcel", produces = MediaType.APPLICATION_JSON_VALUE)
 public class LogErrorExcelController {
 
