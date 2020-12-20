@@ -28,5 +28,12 @@ public class LogErrorExcelController {
 			@RequestParam(required = false) Date endDate) throws ServletException {
 		return logErrorExcelService.listLogs(empresaId,ejercicioId,startDate == null ? new Date(0) : startDate, endDate == null ? new Date() : endDate);
 	}
+	
+	@GetMapping(value = "reportPdf")
+	public ResponseEntity<?> reportLogError(@RequestParam(required = false) Long empresaId,
+			@RequestParam(required = false) Long ejercicioId, @RequestParam(required = false) Date startDate,
+			@RequestParam(required = false) Date endDate) throws ServletException {
+		return logErrorExcelService.reportLogs(empresaId,ejercicioId,startDate == null ? new Date(0) : startDate, endDate == null ? new Date() : endDate);
+	}
 
 }
